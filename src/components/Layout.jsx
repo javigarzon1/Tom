@@ -11,7 +11,7 @@ export default function Layout(){
           <Outlet />
         </div>
       </main>
-      <footer className="text-center text-sm text-gray-400 py-6">Tomatoes · Diseño oscuro elegante · © {new Date().getFullYear()}</footer>
+      <footer className="text-center text-sm text-emerald-300/80 py-6">Tomatoes · Diseño verde elegante · © {new Date().getFullYear()}</footer>
     </div>
   )
 }

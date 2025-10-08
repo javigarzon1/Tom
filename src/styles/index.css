@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root{
-  --bg-1:#0F0F0F;
-  --bg-2:#181818;
+  --bg-1:#0E2E1A; /* dark green base */
+  --bg-2:#12311F; /* darker green surface */
   --text:#FFFFFF;
   --sub:#A5A5A5;
-  --accent:#E50914;
+  --accent:#22C55E; /* green accent */
 }
 
 html,body,#root{height:100%;}
@@ -24,5 +24,9 @@ body{
   backdrop-filter: blur(6px);
 }
 
-/* Utility for tomato accent outline */
-.outline-tomato{ box-shadow: 0 6px 18px rgba(229,9,20,0.14); }
+/* Utility for green accent outline */
+.outline-accent{ box-shadow: 0 6px 18px rgba(34,197,94,0.18); }
+
+/* Hide horizontal scrollbar utility */
+.no-scrollbar::-webkit-scrollbar{ display: none; }
+.no-scrollbar{ -ms-overflow-style: none; scrollbar-width: none; }

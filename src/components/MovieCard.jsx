@@ -13,9 +13,9 @@ return (
 <motion.article whileHover={{ scale: 1.03 }} className="card rounded-md overflow-hidden shadow-sm">
 <div className="relative">
 <Link to={`/movie/${movie.id}`}>
-<img src={movie.poster} alt={movie.title} className="w-full h-64 object-cover" />
+<img src={movie.poster} alt={movie.title} loading="lazy" className="w-full h-64 object-cover" />
 </Link>
-<button onClick={() => toggleFavorite(movie)} className={`absolute top-3 right-3 p-2 rounded-md ${isFav ? 'bg-tomato text-white' : 'bg-white/6 text-white'}`} aria-label="Toggle favorite">
+<button onClick={() => toggleFavorite(movie)} className={`absolute top-3 right-3 p-2 rounded-md ${isFav ? 'bg-emerald-600 text-white' : 'bg-white/6 text-white'}`} aria-label="Toggle favorite">
 {isFav ? '♥' : '♡'}
 </button>
 </div>
