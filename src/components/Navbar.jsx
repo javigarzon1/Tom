@@ -14,10 +14,12 @@ export default function Navbar(){
   }, [])
 
   return (
-    <nav className={`${scrolled ? 'bg-[#0E2E1A]/95 shadow-md' : 'bg-transparent'} w-full border-b border-emerald-900/30 fixed top-0 z-30 transition-colors`}>
+    <nav className={`${scrolled ? 'bg-white/95 shadow-md' : 'bg-transparent'} w-full border-b border-gray-200 fixed top-0 z-30 transition-colors`}>
       <div className="w-full px-4 py-4 flex items-center justify-between gap-6">
         <Link to="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="MOVIEW" className="w-10 h-10 rounded-md object-cover border border-emerald-700/50 bg-[#0B2215]" />
+          <div className="w-10 h-10 rounded-md overflow-hidden border border-emerald-700/50 bg-[var(--bg-1)]">
+            <img src="/logo.jpeg" alt="MOVIEW" className="w-full h-full object-cover" />
+          </div>
           <span className="font-semibold tracking-tight">MOVIEW</span>
         </Link>
 

@@ -45,7 +45,7 @@ export default function Home(){
       {/* Destacados */}
       <section className="mb-10">
         <div className="mb-4 text-center">
-          <h2 className="text-2xl font-semibold">Títulos destacados</h2>
+          <h2 className="text-2xl font-semibold text-gray-900">Títulos destacados</h2>
         </div>
         <div className="relative">
           <button
@@ -74,8 +74,8 @@ export default function Home(){
                       </div>
                     </Link>
                   </div>
-                  <h3 className="text-white text-sm font-semibold mb-1 line-clamp-2 leading-tight">{item.title}</h3>
-                  <p className="text-gray-400 text-xs">{item.year}</p>
+                  <h3 className="text-gray-900 text-sm font-semibold mb-1 line-clamp-2 leading-tight">{item.title}</h3>
+                  <p className="text-gray-600 text-xs">{item.year}</p>
                 </div>
               ))}
             </div>

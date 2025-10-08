@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root{
-  --bg-1:#0E2E1A; /* dark green base */
-  --bg-2:#12311F; /* darker green surface */
-  --text:#FFFFFF;
-  --sub:#A5A5A5;
+  --bg-1:#FFFFFF; /* light base */
+  --bg-2:#F5F7F9; /* light surface */
+  --text:#0D0D0D; /* dark text */
+  --sub:#6B7280; /* gray-500 */
   --accent:#22C55E; /* green accent */
 }
 
