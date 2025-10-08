@@ -37,8 +37,8 @@ export default function Home(){
       <div className="mb-8 flex items-center justify-between">
         <h1 className="text-3xl font-bold">Descubrir</h1>
         <div className="flex gap-2">
-          <button onClick={() => setFilter('all')} className={`px-3 py-2 rounded ${filter==='all' ? 'bg-white/5' : 'bg-white/3'}`}>Todas</button>
-          <button onClick={() => setFilter('favorites')} className={`px-3 py-2 rounded ${filter==='favorites' ? 'bg-white/5' : 'bg-white/3'}`}>Favoritos</button>
+          <button onClick={() => setFilter('all')} className={`px-3 py-2 rounded border ${filter==='all' ? 'border-emerald-500 text-emerald-700 bg-emerald-50' : 'border-gray-300 bg-white text-gray-700'}`}>Todas</button>
+          <button onClick={() => setFilter('favorites')} className={`px-3 py-2 rounded border ${filter==='favorites' ? 'border-emerald-500 text-emerald-700 bg-emerald-50' : 'border-gray-300 bg-white text-gray-700'}`}>Favoritos</button>
         </div>
       </div>
 

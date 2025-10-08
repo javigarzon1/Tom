@@ -5,6 +5,9 @@ import SearchBar from './SearchBar'
 export default function Navbar(){
   const navigate = useNavigate()
   const [scrolled, setScrolled] = useState(false)
+  const [theme, setTheme] = useState(() => {
+    try{ return localStorage.getItem('moview:theme') || 'light' }catch{ return 'light' }
+  })
 
   useEffect(() => {
     function onScroll(){ setScrolled(window.scrollY > 4) }
@@ -12,6 +15,11 @@ export default function Navbar(){
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'dark' : 'light')
+    try{ localStorage.setItem('moview:theme', theme) }catch{}
+  }, [theme])
 
   return (
     <nav className={`${scrolled ? 'bg-white/95 shadow-md' : 'bg-transparent'} w-full border-b border-gray-200 fixed top-0 z-30 transition-colors`}>
@@ -36,7 +44,7 @@ export default function Navbar(){
             Favoritos
           </NavLink>
           <button onClick={() => navigate('/')} className="px-3 py-2 rounded-md text-sm border border-emerald-700 hover:bg-white/2">Inicio</button>
-          <div className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center">U</div>
+          <button onClick={() => setTheme(t => t==='dark' ? 'light' : 'dark')} className="px-3 py-2 rounded-md text-sm border border-gray-300 bg-white text-gray-700">{theme==='dark' ? 'Claro' : 'Oscuro'}</button>
         </div>
       </div>
     </nav>

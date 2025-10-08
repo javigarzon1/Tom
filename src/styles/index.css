@@ -10,6 +10,15 @@
   --accent:#22C55E; /* green accent */
 }
 
+/* Dark theme variables */
+[data-theme="dark"]{
+  --bg-1:#0E2E1A;
+  --bg-2:#12311F;
+  --text:#FFFFFF;
+  --sub:#A5A5A5;
+  --accent:#22C55E;
+}
+
 html,body,#root{height:100%;}
 body{
   background:var(--bg-1);
@@ -17,11 +26,11 @@ body{
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
-/* Card glass */
+/* Card for light theme */
 .card{
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border: 1px solid rgba(255,255,255,0.03);
-  backdrop-filter: blur(6px);
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB; /* gray-200 */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
 
 /* Utility for green accent outline */
