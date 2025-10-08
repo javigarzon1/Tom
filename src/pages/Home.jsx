@@ -14,7 +14,7 @@ export default function Home(){
   }, [filter, favorites])
 
   useEffect(() => {
-    document.title = 'Tomatoes — Descubrir películas'
+    document.title = 'MOVIEW — Descubrir'
   }, [])
 
   const featured = mock.filter(m => m.featured)
