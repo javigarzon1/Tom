@@ -2,16 +2,15 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar'
 
-export default function Layout(){
+export default function Layout({ children }) {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-1 flex justify-center p-6">
-        <div className="w-full max-w-6xl">
-          <Outlet />
-        </div>
-      </main>
-      <footer className="text-center text-sm text-gray-400 py-6">Tomatoes · Diseño oscuro elegante · © {new Date().getFullYear()}</footer>
+    <div className="min-h-screen bg-[#0F0F0F] text-white">
+      <div className="pt-20 max-w-6xl mx-auto px-4">
+        {children}
+        <footer className="mt-10 text-center text-sm text-gray-500">
+          Tomatoes · Diseño oscuro elegante · © 2025
+        </footer>
+      </div>
     </div>
-  )
+  );
 }
